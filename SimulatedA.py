@@ -25,8 +25,8 @@ S = City("A", 27, 10)
 T = City("B", 13, 20)
 U = City("C", 30, 20)
 V = City("A", 3, 10)
-W = City("B", 10, 27)
-X = City("C", 15, 19)
+W = City("B", 10, 7)
+X = City("C", 15, 10)
 
 #route set-up
 route = Route([A, B, C, D, E, F, G, H, I, J, K, L])
@@ -50,10 +50,10 @@ def randomIndexes(rand):
 
 
 def sA(startRoute):
-    T = 100000
+    Temp = 100000
     currentBest = startRoute
-    while(T > 0):
-        #print(currentBest.distance)
+    while(Temp > 0):
+        print(currentBest.distance)
         newRoute = Route(currentBest.route[:])
 
         i, j = randomIndexes(len(newRoute.route))
@@ -61,15 +61,16 @@ def sA(startRoute):
 
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
+        #prob = 
         if distantDifference > 0:
             currentBest = newRoute
-        elif (distantDifference/T) > random.uniform(0, 1):
+        elif (distantDifference/Temp) > random.uniform(0, 1):
             print("passing")
             currentBest = newRoute
 
         #print(T)
         decrease = 10*0.3
-        T -= decrease
+        Temp -= decrease
 
 
 
