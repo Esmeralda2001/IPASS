@@ -61,10 +61,10 @@ def sA(startRoute):
 
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
-        #prob = 
+        #prob =
         if distantDifference > 0:
             currentBest = newRoute
-        elif (distantDifference/Temp) > random.uniform(0, 1):
+        elif (abs(distantDifference/Temp)) > random.uniform(0, 1):
             print("passing")
             currentBest = newRoute
 
