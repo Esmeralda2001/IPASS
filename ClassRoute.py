@@ -17,4 +17,8 @@ class Route:
             total += c1.distance(c2)
         self.distance = total
 
+    def toString(self):
+        for i in range(len(self.route)):
+            print(self.route[i])
+
 
