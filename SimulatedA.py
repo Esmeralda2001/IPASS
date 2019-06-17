@@ -52,6 +52,7 @@ def randomIndexes(rand):
 def sA(startRoute):
     Temp = 100000
     currentBest = startRoute
+    bestRoute = startRoute
     while(Temp > 0):
         print(currentBest.distance)
         newRoute = Route(currentBest.route[:])
@@ -61,6 +62,7 @@ def sA(startRoute):
 
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
+        print(currentBest.distance, newRoute.distance, distantDifference)
         #prob =
         if distantDifference > 0:
             currentBest = newRoute
@@ -68,10 +70,13 @@ def sA(startRoute):
             print("passing")
             currentBest = newRoute
 
-        #print(T)
+        if currentBest.distance < bestRoute.distance:
+            bestRoute = currentBest
+
         decrease = 10*0.3
         Temp -= decrease
 
+    print("Best route", bestRoute.distance)
 
 
 sA(route)
