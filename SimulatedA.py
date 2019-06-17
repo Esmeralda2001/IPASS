@@ -1,4 +1,5 @@
 import random
+import time
 from ClassCities import City
 from ClassRoute import Route
 
@@ -15,21 +16,21 @@ I = City("C", 20, 20)
 J = City("A", 6, 10)
 K = City("B", 10, 7)
 L = City("C", 15, 10)
-M = City("A", 15, 25)
-N = City("B", 25, 0)
-O = City("C", 25, 10)
-P = City("A", 25, 15)
-Q = City("B", 17, 14)
-R = City("C", 20, 30)
-S = City("A", 27, 10)
-T = City("B", 13, 20)
-U = City("C", 30, 20)
-V = City("A", 3, 10)
-W = City("B", 10, 7)
-X = City("C", 15, 10)
+M = City("A", 15, 35)
+N = City("B", 25, 30)
+O = City("C", 25, 40)
+P = City("A", 25, 65)
+Q = City("B", 47, 14)
+R = City("C", 20, 40)
+S = City("A", 27, 30)
+T = City("B", 33, 20)
+U = City("C", 35, 20)
+V = City("A", 1, 20)
+W = City("B", 10, 37)
+X = City("C", 15, 16)
 
 #route set-up
-route = Route([A, B, C, D, E, F, G, H, I, J, K, L])
+route = Route([A, B, C, D, E, F, G, H, I, J, K, L])#, M, N, O, P, Q, R, S, T, U, V, W, X])
 route.totalDistance()
 print(route.distance)
 
@@ -50,11 +51,12 @@ def randomIndexes(rand):
 
 
 def sA(startRoute):
-    Temp = 100000
+    startTime = time.monotonic()
+    Temp = 10000*len(startRoute.route)
     currentBest = startRoute
     bestRoute = startRoute
     while(Temp > 0):
-        print(currentBest.distance)
+        #print(currentBest.distance)
         newRoute = Route(currentBest.route[:])
 
         i, j = randomIndexes(len(newRoute.route))
@@ -62,12 +64,13 @@ def sA(startRoute):
 
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
-        print(currentBest.distance, newRoute.distance, distantDifference)
-        #prob =
+        acceptance = 1/(3+(distantDifference/Temp)**2)
+        #print(currentBest.distance, newRoute.distance, distantDifference)
+
         if distantDifference > 0:
             currentBest = newRoute
-        elif (abs(distantDifference/Temp)) > random.uniform(0, 1):
-            print("passing")
+        elif acceptance > random.uniform(0, 1):
+            #print("passing")
             currentBest = newRoute
 
         if currentBest.distance < bestRoute.distance:
@@ -77,7 +80,7 @@ def sA(startRoute):
         Temp -= decrease
 
     print("Best route", bestRoute.distance)
-
+    print("Elapsed time", time.monotonic()-startTime)
 
 sA(route)
 
