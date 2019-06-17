@@ -32,7 +32,7 @@ W = City("B", 10, 37)
 X = City("C", 15, 16)
 
 #route set-up
-route = Route([A, B, C, D, E, F, G, H, I, J, K, L])#, M, N, O, P, Q, R, S, T, U, V, W, X])
+route = Route([A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X])
 route.totalDistance()
 print(route.distance)
 
