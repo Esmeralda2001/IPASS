@@ -64,18 +64,22 @@ def sA(startRoute):
 
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
-        acceptance = 1/(3+(distantDifference/Temp)**2)
-        #print(currentBest.distance, newRoute.distance, distantDifference)
+        #acceptance might need some work too
+        acceptance = 1/(10+(distantDifference/Temp)**2)
 
+        #algorithm picks a better solution
+        #or a worse solution
+        #this is determined by acceptance
         if distantDifference > 0:
             currentBest = newRoute
         elif acceptance > random.uniform(0, 1):
-            #print("passing")
             currentBest = newRoute
 
         if currentBest.distance < bestRoute.distance:
             bestRoute = currentBest
 
+        #decrease of temperature. this might still need some work but i have a difficult time
+        #finding a suitable function for this
         decrease = 10*0.3
         Temp -= decrease
 
