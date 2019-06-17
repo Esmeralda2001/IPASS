@@ -1,7 +1,9 @@
 import random
 import time
+from Utility import *
 from ClassCities import City
 from ClassRoute import Route
+from TwoOpt import *
 
 #temporary city set-up
 A = City("A", 0, 10)
@@ -34,12 +36,6 @@ route = Route([A, B, C, D, E, F, G, H, I, J, K, L])#, M, N, O, P, Q, R, S, T, U,
 route.totalDistance()
 print(route.distance)
 
-#swap function
-#swaps two cities with eachother
-def swap(r, i, j):
-    temp = r[i]
-    r[i] = r[j]
-    r[j] = temp
 
 def randomIndexes(rand):
     i = random.randrange(rand)
@@ -83,7 +79,9 @@ def sA(startRoute):
         decrease = 10*0.3
         Temp -= decrease
 
-    print("Best route", bestRoute.distance)
+    print("Best route before TwoOpt", bestRoute.distance)
+    bestRoute = twoOpt(bestRoute)
+    print("Best route after TwoOpt", bestRoute.distance)
     print("Elapsed time", time.monotonic()-startTime)
 
 sA(route)
