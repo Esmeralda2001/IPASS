@@ -44,12 +44,12 @@ E.addNeighbor(D)
 
 #route set-up
 route1 = Route([A, B, E, C, D])
-#drawRoute(route1.route)
-#route1.totalDistance()
-#print(route1.distance)
+drawRoute(route1.route)
+route1.totalDistance()
+print(route1.distance)
 
-#route1 = sA(route1)
-#drawRoute(route1.route)
+route1 = sA(route1)
+drawRoute(route1.route)
 
 #--------------------------------------------------------TEST CASE: 2--------------------------------------------------------------------------
 #CITIES: 6
@@ -103,8 +103,10 @@ K.addNeighbor(J)
 #route set-up
 route2 = Route([F, G, H, I, J, K])
 route2.totalDistance()
-#print(route2.distance)
-#sA(route2)
+drawRoute(route2.route)
+print(route2.distance)
+route2 = sA(route2)
+drawRoute(route2.route)
 
 #--------------------------------------------------------TEST CASE: 3--------------------------------------------------------------------------
 #CITIES: 7
@@ -170,10 +172,10 @@ Q.addNeighbor(Q)
 #route set-up
 route3 = Route([L, O, N, M, R, Q, P])
 route3.totalDistance()
-#print(route3.distance)
-#drawRoute(route3.route)
-#route3 = sA(route3)
-#drawRoute(route3.route)
+print(route3.distance)
+drawRoute(route3.route)
+route3 = sA(route3)
+drawRoute(route3.route)
 #route3.toString()
 
 
@@ -183,7 +185,7 @@ route3.totalDistance()
 S = City("S", 0, 10)
 T = City("T", 15, 5)
 U = City("U", 15, 10)
-V = City("V", 30, 10)
+V = City("V", 20, 20)
 W = City("W", 2.5, 20)
 X = City("X", 5, 0)
 Y = City("Y", 10, 0)
