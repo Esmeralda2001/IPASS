@@ -7,32 +7,36 @@ from TwoOpt import *
 
 #temporary city set-up
 A = City("A", 0, 10)
-B = City("B", 10, 0)
-C = City("C", 10, 10)
-D = City("D", 5, 15)
-E = City("E", 10, 15)
-F = City("F", 20, 10)
-G = City("G", 2, 10)
-H = City("H", 10, 20)
-I = City("I", 20, 20)
-J = City("J", 6, 10)
-K = City("K", 10, 7)
-L = City("L", 15, 10)
-M = City("M", 15, 35)
-N = City("N", 25, 30)
-O = City("O", 25, 40)
-P = City("P", 25, 65)
-Q = City("Q", 47, 14)
-R = City("R", 20, 40)
-S = City("S", 27, 30)
-T = City("T", 33, 20)
-U = City("U", 35, 20)
-V = City("V", 1, 20)
-W = City("W", 10, 37)
-X = City("X", 15, 16)
+B = City("B", 10, 15)
+C = City("C", 15, 10)
+D = City("D", 10, 10)
+E = City("E", 10, 0)
+
+A.addNeighbor(B)
+A.addNeighbor(E)
+A.addNeighbor(D)
+A.addNeighbor(C)
+
+B.addNeighbor(A)
+B.addNeighbor(C)
+B.addNeighbor(E)
+
+C.addNeighbor(A)
+C.addNeighbor(B)
+C.addNeighbor(D)
+C.addNeighbor(E)
+
+D.addNeighbor(A)
+D.addNeighbor(C)
+D.addNeighbor(E)
+
+E.addNeighbor(A)
+E.addNeighbor(B)
+E.addNeighbor(C)
+E.addNeighbor(D)
 
 #route set-up
-route = Route([A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X])
+route = Route([A, B, E, C, D])#, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X])
 #route.toString()
 #route.setNeighbors()
 #route.sortRoute()
@@ -50,6 +54,7 @@ def randomIndexes(rand):
     return i, j
 
 
+
 def sA(startRoute):
     startTime = time.monotonic()
     Temp = 10000*len(startRoute.route)
@@ -62,6 +67,42 @@ def sA(startRoute):
         i, j = randomIndexes(len(newRoute.route))
         swap(newRoute.route, i, j)
 
+        swapFound = False
+        counter = 0
+
+        while not swapFound and counter < 5000:
+            counter += 1
+            swap(newRoute.route, i, j)
+            i, j = randomIndexes(len(newRoute.route))
+            swap(newRoute.route, i, j)
+
+            if i == 0 and j < len(newRoute.route)-1:
+                if (newRoute.route[i] in newRoute.route[i+1].neighbors) and (newRoute.route[j] in newRoute.route[j+1].neighbors) and (newRoute.route[j] in newRoute.route[j-1].neighbors):
+                    swapFound = True
+            elif i == 0 and j == len(newRoute.route)-1:
+                if (newRoute.route[i] in newRoute.route[i + 1].neighbors) and (newRoute.route[j] in newRoute.route[j - 1].neighbors):
+                    swapFound = True
+            elif j == 0 and i == len(newRoute.route)-1:
+                if (newRoute.route[i] in newRoute.route[i - 1].neighbors) and (newRoute.route[j] in newRoute.route[j + 1].neighbors):
+                    swapFound = True
+            elif j > 0 and i == len(newRoute.route)-1:
+                if (newRoute.route[i] in newRoute.route[i - 1].neighbors) and (newRoute.route[j] in newRoute.route[j + 1].neighbors) and (newRoute.route[j] in newRoute.route[j - 1].neighbors):
+                    swapFound = True
+            elif i > 0 and j == len(newRoute.route)-1:
+                if (newRoute.route[i] in newRoute.route[i - 1].neighbors) and (newRoute.route[i] in newRoute.route[i + 1].neighbors) and (newRoute.route[j] in newRoute.route[j - 1].neighbors):
+                    swapFound = True
+            elif j == 0 and i < len(newRoute.route)-1:
+                if (newRoute.route[j] in newRoute.route[j+1].neighbors) and (newRoute.route[i] in newRoute.route[i+1].neighbors) and (newRoute.route[i] in newRoute.route[i-1].neighbors):
+                    swapFound = True
+            elif j > 0 and i < len(newRoute.route)-1:
+                if (newRoute.route[j] in newRoute.route[j+1].neighbors) and (newRoute.route[j] in newRoute.route[j-1].neighbors) and (newRoute.route[i] in newRoute.route[i+1].neighbors) and (newRoute.route[i] in newRoute.route[i-1].neighbors):
+                    swapFound = True
+
+
+        if not swapFound:
+            swap(newRoute.route, i, j)
+
+        newRoute.toString()
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
         #acceptance might need some work too
@@ -84,7 +125,7 @@ def sA(startRoute):
         Temp -= decrease
 
     print("Best route before TwoOpt", bestRoute.distance)
-    bestRoute = twoOpt(bestRoute)
+    #bestRoute = twoOpt(bestRoute)
     print("Best route after TwoOpt", bestRoute.distance)
     print("Elapsed time", time.monotonic()-startTime)
     bestRoute.toString()

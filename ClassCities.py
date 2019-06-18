@@ -19,6 +19,9 @@ class City:
         dist = math.sqrt(xAxis+yAxis)
         return dist
 
+    def addNeighbor(self, city):
+        self.neighbors.append(city)
+
     def getNeighbors(self, arr):
         for i in range(2):
             closestDist = 1000
