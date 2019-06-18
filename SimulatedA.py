@@ -5,45 +5,6 @@ from ClassCities import City
 from ClassRoute import Route
 from TwoOpt import *
 
-#temporary city set-up
-A = City("A", 0, 10)
-B = City("B", 10, 15)
-C = City("C", 15, 10)
-D = City("D", 10, 10)
-E = City("E", 10, 0)
-
-A.addNeighbor(B)
-A.addNeighbor(E)
-A.addNeighbor(D)
-A.addNeighbor(C)
-
-B.addNeighbor(A)
-B.addNeighbor(C)
-B.addNeighbor(E)
-
-C.addNeighbor(A)
-C.addNeighbor(B)
-C.addNeighbor(D)
-C.addNeighbor(E)
-
-D.addNeighbor(A)
-D.addNeighbor(C)
-D.addNeighbor(E)
-
-E.addNeighbor(A)
-E.addNeighbor(B)
-E.addNeighbor(C)
-E.addNeighbor(D)
-
-#route set-up
-route = Route([A, B, E, C, D])#, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X])
-#route.toString()
-#route.setNeighbors()
-#route.sortRoute()
-#route.toString()
-route.totalDistance()
-print(route.distance)
-
 
 def randomIndexes(rand):
     i = random.randrange(rand)
@@ -145,7 +106,6 @@ def sA(startRoute):
     print("Elapsed time", time.monotonic()-startTime)
     bestRoute.toString()
 
-sA(route)
 
 
 
