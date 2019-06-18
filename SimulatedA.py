@@ -54,6 +54,54 @@ def randomIndexes(rand):
     return i, j
 
 
+def swapCheck(newR, i, j):
+    swapFound = False
+    counter = 0
+
+    while not swapFound and counter < 5000:
+        counter += 1
+        swap(newR.route, i, j)
+        i, j = randomIndexes(len(newR.route))
+        swap(newR.route, i, j)
+
+        if i == 0 and j < len(newR.route) - 1:
+            if (newR.route[i] in newR.route[i + 1].neighbors) and (
+                    newR.route[j] in newR.route[j + 1].neighbors) and (
+                    newR.route[j] in newR.route[j - 1].neighbors):
+                swapFound = True
+        elif i == 0 and j == len(newR.route) - 1:
+            if (newR.route[i] in newR.route[i + 1].neighbors) and (
+                    newR.route[j] in newR.route[j - 1].neighbors):
+                swapFound = True
+        elif j == 0 and i == len(newR.route) - 1:
+            if (newR.route[i] in newR.route[i - 1].neighbors) and (
+                    newR.route[j] in newR.route[j + 1].neighbors):
+                swapFound = True
+        elif j > 0 and i == len(newR.route) - 1:
+            if (newR.route[i] in newR.route[i - 1].neighbors) and (
+                    newR.route[j] in newR.route[j + 1].neighbors) and (
+                    newR.route[j] in newR.route[j - 1].neighbors):
+                swapFound = True
+        elif i > 0 and j == len(newR.route) - 1:
+            if (newR.route[i] in newR.route[i - 1].neighbors) and (
+                    newR.route[i] in newR.route[i + 1].neighbors) and (
+                    newR.route[j] in newR.route[j - 1].neighbors):
+                swapFound = True
+        elif j == 0 and i < len(newR.route) - 1:
+            if (newR.route[j] in newR.route[j + 1].neighbors) and (
+                    newR.route[i] in newR.route[i + 1].neighbors) and (
+                    newR.route[i] in newR.route[i - 1].neighbors):
+                swapFound = True
+        elif j > 0 and i < len(newR.route) - 1:
+            if (newR.route[j] in newR.route[j + 1].neighbors) and (
+                    newR.route[j] in newR.route[j - 1].neighbors) and (
+                    newR.route[i] in newR.route[i + 1].neighbors) and (
+                    newR.route[i] in newR.route[i - 1].neighbors):
+                swapFound = True
+
+    if not swapFound:
+        swap(newR.route, i, j)
+
 
 def sA(startRoute):
     startTime = time.monotonic()
@@ -67,40 +115,7 @@ def sA(startRoute):
         i, j = randomIndexes(len(newRoute.route))
         swap(newRoute.route, i, j)
 
-        swapFound = False
-        counter = 0
-
-        while not swapFound and counter < 5000:
-            counter += 1
-            swap(newRoute.route, i, j)
-            i, j = randomIndexes(len(newRoute.route))
-            swap(newRoute.route, i, j)
-
-            if i == 0 and j < len(newRoute.route)-1:
-                if (newRoute.route[i] in newRoute.route[i+1].neighbors) and (newRoute.route[j] in newRoute.route[j+1].neighbors) and (newRoute.route[j] in newRoute.route[j-1].neighbors):
-                    swapFound = True
-            elif i == 0 and j == len(newRoute.route)-1:
-                if (newRoute.route[i] in newRoute.route[i + 1].neighbors) and (newRoute.route[j] in newRoute.route[j - 1].neighbors):
-                    swapFound = True
-            elif j == 0 and i == len(newRoute.route)-1:
-                if (newRoute.route[i] in newRoute.route[i - 1].neighbors) and (newRoute.route[j] in newRoute.route[j + 1].neighbors):
-                    swapFound = True
-            elif j > 0 and i == len(newRoute.route)-1:
-                if (newRoute.route[i] in newRoute.route[i - 1].neighbors) and (newRoute.route[j] in newRoute.route[j + 1].neighbors) and (newRoute.route[j] in newRoute.route[j - 1].neighbors):
-                    swapFound = True
-            elif i > 0 and j == len(newRoute.route)-1:
-                if (newRoute.route[i] in newRoute.route[i - 1].neighbors) and (newRoute.route[i] in newRoute.route[i + 1].neighbors) and (newRoute.route[j] in newRoute.route[j - 1].neighbors):
-                    swapFound = True
-            elif j == 0 and i < len(newRoute.route)-1:
-                if (newRoute.route[j] in newRoute.route[j+1].neighbors) and (newRoute.route[i] in newRoute.route[i+1].neighbors) and (newRoute.route[i] in newRoute.route[i-1].neighbors):
-                    swapFound = True
-            elif j > 0 and i < len(newRoute.route)-1:
-                if (newRoute.route[j] in newRoute.route[j+1].neighbors) and (newRoute.route[j] in newRoute.route[j-1].neighbors) and (newRoute.route[i] in newRoute.route[i+1].neighbors) and (newRoute.route[i] in newRoute.route[i-1].neighbors):
-                    swapFound = True
-
-
-        if not swapFound:
-            swap(newRoute.route, i, j)
+        swapCheck(newRoute, i, j)
 
         newRoute.toString()
         newRoute.totalDistance()
