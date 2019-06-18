@@ -15,7 +15,7 @@ class Route:
             c1 = self.route[i]
             c2 = self.route[i+1]
             total += c1.distance(c2)
-        total += self.route[0].distance(self.route[-1])
+        #total += self.route[0].distance(self.route[-1])
         self.distance = total
 
     def toString(self):
