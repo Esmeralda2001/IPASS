@@ -18,32 +18,6 @@ class Route:
         total += self.route[0].distance(self.route[-1])
         self.distance = total
 
-    def setNeighbors(self):
-        route = self.route
-        for i in range(len(route)):
-            route[i].getNeighbors(route)
-
-    def sortRoute(self):
-        route = self.route
-        sortedRoute = []
-        for i in range(len(route)):
-            if i == 0:
-                sortedRoute.append(route[i])
-            else:
-                print("------------------")
-                print(sortedRoute[i-1].name, ":")
-                neighbors = sortedRoute[i-1].neighbors
-                closestNeighbor = neighbors[0]
-                closestNeighborDist = 1000
-                for j in range(len(neighbors)):
-                    print(neighbors[j].name)
-                    newDist = sortedRoute[i-1].distance(neighbors[j])
-                    if newDist < closestNeighborDist and not neighbors[j] in sortedRoute:
-                        closestNeighbor = neighbors[j]
-                        closestNeighborDist = newDist
-                sortedRoute.append(closestNeighbor)
-        self.route = sortedRoute
-
     def toString(self):
         names = []
         for i in range(len(self.route)):
