@@ -104,7 +104,7 @@ def sA(startRoute):
     #bestRoute = twoOpt(bestRoute)
     print("Best route after TwoOpt", bestRoute.distance)
     print("Elapsed time", time.monotonic()-startTime)
-    bestRoute.toString()
+    return bestRoute
 
 
 

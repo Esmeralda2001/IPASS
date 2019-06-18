@@ -1,6 +1,7 @@
 from SimulatedA import sA
 from ClassRoute import *
 from ClassCities import *
+from GUI import drawRoute
 
 #--------------------------------------------------------TEST CASE: 1--------------------------------------------------------------------------
 #CITIES: 5
@@ -8,9 +9,9 @@ from ClassCities import *
 
 #city set-up
 A = City("A", 0, 10)
-B = City("B", 10, 15)
+B = City("B", 10, 20)
 C = City("C", 15, 10)
-D = City("D", 10, 10)
+D = City("D", 20, 10)
 E = City("E", 10, 0)
 
 #adding neighbors to city A
@@ -43,10 +44,12 @@ E.addNeighbor(D)
 
 #route set-up
 route1 = Route([A, B, E, C, D])
+drawRoute(route1.route)
 route1.totalDistance()
 #print(route1.distance)
 
-#sA(route1)
+route1 = sA(route1)
+drawRoute(route1.route)
 
 #--------------------------------------------------------TEST CASE: 2--------------------------------------------------------------------------
 #CITIES: 6
@@ -168,5 +171,8 @@ Q.addNeighbor(Q)
 route3 = Route([L, O, N, M, R, Q, P])
 route3.totalDistance()
 print(route3.distance)
-sA(route3)
+drawRoute(route3.route)
+route3 = sA(route3)
+drawRoute(route3.route)
+route3.toString()
 
