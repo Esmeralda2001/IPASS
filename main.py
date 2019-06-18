@@ -44,12 +44,12 @@ E.addNeighbor(D)
 
 #route set-up
 route1 = Route([A, B, E, C, D])
-drawRoute(route1.route)
-route1.totalDistance()
+#drawRoute(route1.route)
+#route1.totalDistance()
 #print(route1.distance)
 
-route1 = sA(route1)
-drawRoute(route1.route)
+#route1 = sA(route1)
+#drawRoute(route1.route)
 
 #--------------------------------------------------------TEST CASE: 2--------------------------------------------------------------------------
 #CITIES: 6
@@ -170,9 +170,113 @@ Q.addNeighbor(Q)
 #route set-up
 route3 = Route([L, O, N, M, R, Q, P])
 route3.totalDistance()
-print(route3.distance)
-drawRoute(route3.route)
-route3 = sA(route3)
-drawRoute(route3.route)
-route3.toString()
+#print(route3.distance)
+#drawRoute(route3.route)
+#route3 = sA(route3)
+#drawRoute(route3.route)
+#route3.toString()
 
+
+#--------------------------------------------------------TEST CASE: 4--------------------------------------------------------------------------
+#CITIES: 10
+#MISSING EDGES: UNKNOWN
+S = City("S", 0, 10)
+T = City("T", 15, 5)
+U = City("U", 15, 10)
+V = City("V", 30, 10)
+W = City("W", 2.5, 20)
+X = City("X", 5, 0)
+Y = City("Y", 10, 0)
+Z = City("Z", 10, 10)
+A1 = City("A1", 7.5, 5)
+B1 = City("B1", 15, 15)
+
+#adding neighbors to S
+S.addNeighbor(T)
+S.addNeighbor(U)
+S.addNeighbor(V)
+S.addNeighbor(W)
+S.addNeighbor(X)
+S.addNeighbor(Y)
+S.addNeighbor(Z)
+S.addNeighbor(A1)
+S.addNeighbor(B1)
+
+#adding neighbors to T
+T.addNeighbor(S)
+T.addNeighbor(U)
+T.addNeighbor(V)
+T.addNeighbor(W)
+T.addNeighbor(X)
+T.addNeighbor(Y)
+T.addNeighbor(Z)
+T.addNeighbor(A1)
+T.addNeighbor(B1)
+
+#adding neighbors to U
+U.addNeighbor(S)
+U.addNeighbor(T)
+U.addNeighbor(V)
+U.addNeighbor(W)
+U.addNeighbor(X)
+U.addNeighbor(Y)
+U.addNeighbor(Z)
+U.addNeighbor(A1)
+U.addNeighbor(B1)
+
+#adding neighbors to V
+V.addNeighbor(S)
+V.addNeighbor(T)
+V.addNeighbor(U)
+V.addNeighbor(W)
+
+#adding neighbors to W
+W.addNeighbor(S)
+W.addNeighbor(T)
+W.addNeighbor(V)
+W.addNeighbor(U)
+W.addNeighbor(X)
+
+#adding neighbors to X
+X.addNeighbor(S)
+X.addNeighbor(T)
+X.addNeighbor(U)
+X.addNeighbor(W)
+X.addNeighbor(Y)
+
+#adding neighbors to Y
+Y.addNeighbor(S)
+Y.addNeighbor(T)
+Y.addNeighbor(U)
+Y.addNeighbor(X)
+Y.addNeighbor(Z)
+
+#adding neighbors to Z
+Z.addNeighbor(S)
+Z.addNeighbor(T)
+Z.addNeighbor(U)
+Z.addNeighbor(Z)
+Z.addNeighbor(A1)
+
+#adding neighbors to A1
+A1.addNeighbor(S)
+A1.addNeighbor(T)
+A1.addNeighbor(U)
+A1.addNeighbor(Z)
+A1.addNeighbor(B1)
+
+#adding neighbors to B1
+B1.addNeighbor(S)
+B1.addNeighbor(T)
+B1.addNeighbor(U)
+B1.addNeighbor(A1)
+
+
+#route set-up
+route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
+route4.totalDistance()
+print(route4.distance)
+drawRoute(route4.route)
+route4 = sA(route4)
+route4.toString()
+drawRoute(route4.route)

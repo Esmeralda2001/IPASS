@@ -25,10 +25,12 @@ def drawRoute(route):
         x1, y1 = calculateCoordinates(city.x, city.y)
         x2, y2 = calculateCoordinates(neighbor.x, neighbor.y)
         makeCircle(myMap, x1, y1)
+        Label(text=city.name).place(x=x1 + 5, y=y1 - 5)
         myMap.create_line(x1, y1, x2, y2)
 
     lastCity = route[-1]
     x, y = calculateCoordinates(lastCity.x, lastCity.y)
+    Label(text=lastCity.name).place(x=x + 5, y=y - 5)
     makeCircle(myMap, x, y)
 
 
