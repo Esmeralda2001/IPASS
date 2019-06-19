@@ -7,7 +7,7 @@ def swap(r, i, j):
 
 
 def calculateCoordinates(x, y):
-    x = (x * 10) + 50
-    y = (y * 10) + 50
+    x = (x * 25) + 250
+    y = (y * 25) + 20
 
     return x, y

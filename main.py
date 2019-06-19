@@ -1,7 +1,18 @@
 from SimulatedA import sA
 from ClassRoute import *
 from ClassCities import *
-from GUI import drawRoute
+from GUI import drawRoute, drawConnections
+from tkinter import *
+
+#--------------------------------------------------------GUI SETUP-----------------------------------------------------------------------------
+#GUI set-up
+root = Tk()
+myMap = Canvas(root, width=1000, height=600)
+myMap.pack()
+
+def connections(route):
+    for i in range(len(route.route)):
+        drawConnections(myMap, route.route[i], route.route[i].neighbors, "green")
 
 #--------------------------------------------------------TEST CASE: 1--------------------------------------------------------------------------
 #CITIES: 5
@@ -44,12 +55,12 @@ E.addNeighbor(D)
 
 #route set-up
 route1 = Route([A, B, E, C, D])
-drawRoute(route1.route)
+#drawRoute(myMap, route1.route)
 route1.totalDistance()
 print(route1.distance)
 
 route1 = sA(route1)
-drawRoute(route1.route)
+#drawRoute(myMap, route1.route)
 
 #--------------------------------------------------------TEST CASE: 2--------------------------------------------------------------------------
 #CITIES: 6
@@ -103,10 +114,10 @@ K.addNeighbor(J)
 #route set-up
 route2 = Route([F, G, H, I, J, K])
 route2.totalDistance()
-drawRoute(route2.route)
+#drawRoute(myMap, route2.route)
 print(route2.distance)
 route2 = sA(route2)
-drawRoute(route2.route)
+#drawRoute(myMap, route2.route)
 
 #--------------------------------------------------------TEST CASE: 3--------------------------------------------------------------------------
 #CITIES: 7
@@ -173,18 +184,19 @@ Q.addNeighbor(Q)
 route3 = Route([L, O, N, M, R, Q, P])
 route3.totalDistance()
 print(route3.distance)
-drawRoute(route3.route)
+#drawRoute(myMap, route3.route)
 route3 = sA(route3)
-drawRoute(route3.route)
+#connections(route3)
+#drawRoute(myMap, route3.route)
 #route3.toString()
 
-
+#root.mainloop()
 #--------------------------------------------------------TEST CASE: 4--------------------------------------------------------------------------
 #CITIES: 10
 #MISSING EDGES: UNKNOWN
 S = City("S", 0, 10)
 T = City("T", 15, 5)
-U = City("U", 15, 10)
+U = City("U", 15, 9)
 V = City("V", 20, 20)
 W = City("W", 2.5, 20)
 X = City("X", 5, 0)
@@ -278,7 +290,12 @@ B1.addNeighbor(A1)
 route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
 route4.totalDistance()
 print(route4.distance)
-drawRoute(route4.route)
+#drawRoute(myMap, route4.route)
 route4 = sA(route4)
 route4.toString()
-drawRoute(route4.route)
+connections(route4)
+drawRoute(myMap, route4.route)
+
+
+
+root.mainloop()
