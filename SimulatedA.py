@@ -1,10 +1,16 @@
 import random
 import time
-from Utility import *
 from ClassCities import City
 from ClassRoute import Route
 
+#swap function
+#swaps two cities with eachother
+def swap(r, i, j):
+    temp = r[i]
+    r[i] = r[j]
+    r[j] = temp
 
+#finds two random indexes
 def randomIndexes(rand):
     i = random.randrange(rand)
     j = random.randrange(rand)
@@ -13,7 +19,9 @@ def randomIndexes(rand):
         j = random.randrange(rand)
     return i, j
 
-
+#checks if a swap is valid or not
+#a swap is valid if the order of the elements in the array
+#are all connected to eachother properly
 def swapCheck(newR, i, j):
     swapFound = False
     counter = 0
@@ -24,6 +32,7 @@ def swapCheck(newR, i, j):
         i, j = randomIndexes(len(newR.route))
         swap(newR.route, i, j)
 
+        #many if-statements to account for the first/last element being swapped
         if i == 0 and j < len(newR.route) - 1:
             if (newR.route[i] in newR.route[i + 1].neighbors) and (
                     newR.route[j] in newR.route[j + 1].neighbors) and (
@@ -59,9 +68,10 @@ def swapCheck(newR, i, j):
                     newR.route[i] in newR.route[i - 1].neighbors):
                 swapFound = True
 
+    #reverts the swap if no valid swap was found
     if not swapFound:
         swap(newR.route, i, j)
-    print(counter)
+
 
 def sA(startRoute):
     startTime = time.monotonic()

@@ -1,5 +1,10 @@
 from tkinter import *
-from Utility import *
+
+def calculateCoordinates(x, y):
+    x = (x * 25) + 250
+    y = (y * 25) + 20
+
+    return x, y
 
 def makeCircle(canvas, x, y):
     r = 10 #standard circle radius
