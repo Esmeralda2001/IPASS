@@ -3,7 +3,6 @@ import time
 from Utility import *
 from ClassCities import City
 from ClassRoute import Route
-from TwoOpt import *
 
 
 def randomIndexes(rand):
@@ -19,7 +18,7 @@ def swapCheck(newR, i, j):
     swapFound = False
     counter = 0
 
-    while not swapFound and counter < 5000:
+    while not swapFound and counter < (len(newR.route)*2):
         counter += 1
         swap(newR.route, i, j)
         i, j = randomIndexes(len(newR.route))
@@ -62,11 +61,11 @@ def swapCheck(newR, i, j):
 
     if not swapFound:
         swap(newR.route, i, j)
-
+    print(counter)
 
 def sA(startRoute):
     startTime = time.monotonic()
-    Temp = 10000*len(startRoute.route)
+    Temp = 1000*len(startRoute.route)
     currentBest = startRoute
     bestRoute = startRoute
     while(Temp > 1):
@@ -78,7 +77,6 @@ def sA(startRoute):
 
         swapCheck(newRoute, i, j)
 
-        newRoute.toString()
         newRoute.totalDistance()
         distantDifference = currentBest.distance - newRoute.distance
         #acceptance might need some work too
@@ -95,14 +93,11 @@ def sA(startRoute):
         if currentBest.distance < bestRoute.distance:
             bestRoute = currentBest
 
-        #decrease of temperature. this might still need some work but i have a difficult time
-        #finding a suitable function for this
-        decrease = 10*0.3
+        decrease = 1
         Temp -= decrease
 
-    print("Best route before TwoOpt", bestRoute.distance)
-    #bestRoute = twoOpt(bestRoute)
-    print("Best route after TwoOpt", bestRoute.distance)
+
+    print("Best route after SA + TwoOpt", bestRoute.distance)
     print("Elapsed time", time.monotonic()-startTime)
     return bestRoute
 
