@@ -1,18 +1,20 @@
 from SimulatedA import sA
 from ClassRoute import *
 from ClassCities import *
-from GUI import drawRoute, drawConnections
+from GUI import GUI
 from tkinter import *
 
 #--------------------------------------------------------GUI SETUP-----------------------------------------------------------------------------
 #GUI set-up
-root = Tk()
-myMap = Canvas(root, width=1000, height=600)
-myMap.pack()
+
+
 
 def connections(route):
     for i in range(len(route.route)):
         drawConnections(myMap, route.route[i], route.route[i].neighbors, "green")
+
+def calculateRoute(route):
+    route.toString()
 
 #--------------------------------------------------------TEST CASE: 1--------------------------------------------------------------------------
 #CITIES: 5
@@ -57,7 +59,6 @@ E.addNeighbor(D)
 route1 = Route([A, B, E, C, D])
 #drawRoute(myMap, route1.route)
 route1.totalDistance()
-print(route1.distance)
 
 #route1 = sA(route1)
 #drawRoute(myMap, route1.route)
@@ -114,10 +115,6 @@ K.addNeighbor(J)
 #route set-up
 route2 = Route([F, G, H, I, J, K])
 route2.totalDistance()
-#drawRoute(myMap, route2.route)
-print(route2.distance)
-#route2 = sA(route2)
-#drawRoute(myMap, route2.route)
 
 #--------------------------------------------------------TEST CASE: 3--------------------------------------------------------------------------
 #CITIES: 7
@@ -183,14 +180,6 @@ Q.addNeighbor(Q)
 #route set-up
 route3 = Route([L, O, N, M, R, Q, P])
 route3.totalDistance()
-print(route3.distance)
-#drawRoute(myMap, route3.route)
-#route3 = sA(route3)
-#connections(route3)
-#drawRoute(myMap, route3.route)
-#route3.toString()
-
-#root.mainloop()
 #--------------------------------------------------------TEST CASE: 4--------------------------------------------------------------------------
 #CITIES: 10
 #MISSING EDGES: UNKNOWN
@@ -289,8 +278,11 @@ B1.addNeighbor(A1)
 #route set-up
 route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
 route4.totalDistance()
-print(route4.distance)
-#drawRoute(myMap, route4.route)
+routes = [route1, route2, route3, route4]
+#addButtons(frames["Main"], sA, routes, 4)
+newGui = GUI("Strooi Wagens", "1000x600", routes)
+newGui.home()
+newGui.root.mainloop()
 route4 = sA(route4)
 print(route4.distance)
 route4.toString()
@@ -299,4 +291,3 @@ drawRoute(myMap, route4.route)
 
 
 
-root.mainloop()
