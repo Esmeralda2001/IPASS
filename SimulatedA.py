@@ -107,9 +107,7 @@ def sA(startRoute):
         Temp -= decrease
 
 
-    print("Best route after SA + TwoOpt", bestRoute.distance)
-    print("Elapsed time", time.monotonic()-startTime)
-    return bestRoute
+    return bestRoute, time.monotonic()-startTime
 
 
 

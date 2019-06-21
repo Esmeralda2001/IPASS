@@ -11,7 +11,7 @@ class GUI:
 #------------------------------------------------------------SHAPES--------------------------------------------------------------------
     def calculateCoordinates(self, x, y):
         x = (x * 25) + 250
-        y = (y * 25) + 20
+        y = (y * 20) + 10
 
         return x, y
 
@@ -65,18 +65,37 @@ class GUI:
         self.frames["home"].pack()
         currFrame.pack_forget()
 
-    def mapFrame(self, route):
-        self.frames["home"].pack_forget()
+    def mapFrame(self, route, frame=None, result=False):
         newFrame = Frame(master=self.root)
+        if result:
+            frame.pack_forget()
+            oldLength = route.distance
+            route, elapsedTime = sA(route)
+            infoFrame = Frame(master=newFrame)
+            infoFrame.pack(side=TOP)
+            time = Label(master=infoFrame, text="Time taken to calculate: "+str(elapsedTime))
+            length = Label(master=infoFrame, text="Route length: "+str(route.distance))
+            oldL = Label(master=infoFrame, text="Old route length: "+str(oldLength))
+            time.pack(expand=True, fill=BOTH)
+            length.pack(expand=True, fill=BOTH)
+            oldL.pack(expand=True, fill=BOTH)
+        else:
+            resultButton = Button(master=newFrame, text="Calculate Result",
+            command=lambda arg1=route, arg2=newFrame, arg3=True: self.mapFrame(arg1, arg2, arg3))
+            resultButton.config(height=2, width=15)
+            resultButton.pack(padx=10, pady=10)
+
+        self.frames["home"].pack_forget()
         newFrame.pack(fill="both", expand=True)
         backButton = Button(master=newFrame, text="Return", command=lambda arg=newFrame: self.moveBack(arg))
         backButton.config(height=2, width=15)
         backButton.pack(padx=10, pady=10)
+
         canvas = Canvas(master=newFrame)
         self.connections(canvas, route)
         self.drawRoute(canvas, route.route)
         canvas.pack(fill=BOTH, expand=True)
-        newRoute = sA(route)
+
 
     def addButtons(self, frame, func, amt):
         for i in range(amt):

@@ -276,15 +276,12 @@ B1.addNeighbor(A1)
 route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
 route4.totalDistance()
 routes = [route1, route2, route3, route4]
-#addButtons(frames["Main"], sA, routes, 4)
+
+
 newGui = GUI("Strooi Wagens", "1000x600", routes)
 newGui.home()
 newGui.root.mainloop()
-route4 = sA(route4)
-print(route4.distance)
-route4.toString()
-#connections(route4)
-drawRoute(myMap, route4.route)
+
 
 
 
