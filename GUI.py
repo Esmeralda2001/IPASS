@@ -15,7 +15,7 @@ class GUI:
 
         return x, y
 
-    def makeCircle(self, x, y):
+    def makeCircle(self, canvas, x, y):
         r = 10 #standard circle radius
 
         x0 = x-r
@@ -24,29 +24,33 @@ class GUI:
         y0 = y-r
         y1 = y+r
 
-        return self.root.create_oval(x0, y0, x1, y1)
+        return canvas.create_oval(x0, y0, x1, y1)
 
-    def drawConnections(self, city, neighbors, color):
-        x1, y1 = calculateCoordinates(city.x, city.y)
+    def connections(self, canvas, route):
+        for i in range(len(route.route)):
+            self.drawConnections(canvas, route.route[i], route.route[i].neighbors, "green")
+
+    def drawConnections(self, canvas, city, neighbors, color):
+        x1, y1 = self.calculateCoordinates(city.x, city.y)
         for i in range(len(neighbors)):
-            x2, y2 = calculateCoordinates(neighbors[i].x, neighbors[i].y)
-            self.root.create_line(x1, y1, x2, y2, fill=color)
+            x2, y2 = self.calculateCoordinates(neighbors[i].x, neighbors[i].y)
+            canvas.create_line(x1, y1, x2, y2, fill=color)
 
 #------------------------------------------------------------ROUTE----------------------------------------------------------------------
-    def drawRoute(self, route):
+    def drawRoute(self, canvas, route):
         for i in range(len(route)-1):
             city = route[i]
             neighbor = route[i+1]
-            x1, y1 = calculateCoordinates(city.x, city.y)
-            x2, y2 = calculateCoordinates(neighbor.x, neighbor.y)
-            makeCircle(x1, y1)
-            Label(text=city.name).place(x=x1 + 5, y=y1 - 5)
-            self.root.create_line(x1, y1, x2, y2)
+            x1, y1 = self.calculateCoordinates(city.x, city.y)
+            x2, y2 = self.calculateCoordinates(neighbor.x, neighbor.y)
+            self.makeCircle(canvas, x1, y1)
+            Label(master=canvas, text=city.name).place(x=x1 + 5, y=y1 - 5)
+            canvas.create_line(x1, y1, x2, y2)
 
         lastCity = route[-1]
-        x, y = calculateCoordinates(lastCity.x, lastCity.y)
-        Label(text=lastCity.name).place(x=x + 5, y=y - 5)
-        makeCircle(x, y)
+        x, y = self.calculateCoordinates(lastCity.x, lastCity.y)
+        Label(master=canvas, text=lastCity.name).place(x=x + 5, y=y - 5)
+        self.makeCircle(canvas, x, y)
 
 
 
@@ -55,15 +59,23 @@ class GUI:
         homeFrame = Frame(master=self.root)
         homeFrame.pack(fill="both", expand=True)
         self.addButtons(homeFrame, self.mapFrame, 4)
-        if "home" not in self.frames:
-            self.frames["home"] = homeFrame
+        self.frames["home"] = homeFrame
 
+    def moveBack(self, currFrame):
+        self.frames["home"].pack()
+        currFrame.pack_forget()
 
     def mapFrame(self, route):
         self.frames["home"].pack_forget()
         newFrame = Frame(master=self.root)
         newFrame.pack(fill="both", expand=True)
-        backButton = Button(master=newFrame, text="Return", command=self.home)
+        backButton = Button(master=newFrame, text="Return", command=lambda arg=newFrame: self.moveBack(arg))
+        backButton.config(height=2, width=15)
+        backButton.pack(padx=10, pady=10)
+        canvas = Canvas(master=newFrame)
+        self.connections(canvas, route)
+        self.drawRoute(canvas, route.route)
+        canvas.pack(fill=BOTH, expand=True)
         newRoute = sA(route)
 
     def addButtons(self, frame, func, amt):

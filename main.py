@@ -9,9 +9,6 @@ from tkinter import *
 
 
 
-def connections(route):
-    for i in range(len(route.route)):
-        drawConnections(myMap, route.route[i], route.route[i].neighbors, "green")
 
 def calculateRoute(route):
     route.toString()
@@ -286,7 +283,7 @@ newGui.root.mainloop()
 route4 = sA(route4)
 print(route4.distance)
 route4.toString()
-connections(route4)
+#connections(route4)
 drawRoute(myMap, route4.route)
 
 
