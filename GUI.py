@@ -45,7 +45,7 @@ class GUI:
             x2, y2 = self.calculateCoordinates(neighbor.x, neighbor.y)
             self.makeCircle(canvas, x1, y1)
             Label(master=canvas, text=city.name).place(x=x1 + 5, y=y1 - 5)
-            canvas.create_line(x1, y1, x2, y2)
+            canvas.create_line(x1, y1, x2, y2, width=5)
 
         lastCity = route[-1]
         x, y = self.calculateCoordinates(lastCity.x, lastCity.y)

@@ -4,15 +4,6 @@ from ClassCities import *
 from GUI import GUI
 from tkinter import *
 
-#--------------------------------------------------------GUI SETUP-----------------------------------------------------------------------------
-#GUI set-up
-
-
-
-
-def calculateRoute(route):
-    route.toString()
-
 #--------------------------------------------------------TEST CASE: 1--------------------------------------------------------------------------
 #CITIES: 5
 #MISSING EDGES: 1
@@ -51,14 +42,6 @@ E.addNeighbor(A)
 E.addNeighbor(B)
 E.addNeighbor(C)
 E.addNeighbor(D)
-
-#route set-up
-route1 = Route([A, B, E, C, D])
-#drawRoute(myMap, route1.route)
-route1.totalDistance()
-
-#route1 = sA(route1)
-#drawRoute(myMap, route1.route)
 
 #--------------------------------------------------------TEST CASE: 2--------------------------------------------------------------------------
 #CITIES: 6
@@ -108,10 +91,6 @@ K.addNeighbor(G)
 K.addNeighbor(H)
 K.addNeighbor(I)
 K.addNeighbor(J)
-
-#route set-up
-route2 = Route([F, G, H, I, J, K])
-route2.totalDistance()
 
 #--------------------------------------------------------TEST CASE: 3--------------------------------------------------------------------------
 #CITIES: 7
@@ -174,9 +153,6 @@ Q.addNeighbor(O)
 Q.addNeighbor(P)
 Q.addNeighbor(Q)
 
-#route set-up
-route3 = Route([L, O, N, M, R, Q, P])
-route3.totalDistance()
 #--------------------------------------------------------TEST CASE: 4--------------------------------------------------------------------------
 #CITIES: 10
 #MISSING EDGES: UNKNOWN
@@ -272,12 +248,35 @@ B1.addNeighbor(U)
 B1.addNeighbor(A1)
 
 
-#route set-up
+#--------------------------------------------------------LEIDSCHE RIJN------------------------------------------------------------------------
+#POINTS: 15
+Bo = City("Bonen", 0, 10)
+Di = City("Dille", 15, 5)
+Wi = City("Winterkers", 15, 9)
+Ka = City("Karwij", 20, 20)
+Pe = City("Pepper", 2.5, 20)
+La = City("Lavender", 5, 0)
+Pi = City("Pimper", 10, 0)
+Se = City("Selderie", 10, 10)
+Ko = City("Koriander", 7.5, 5)
+Bi = City("Biel", 15, 15)
+Ba = City("Basilikum", 15, 15)
+Mi = City("Mierikswortel", 15, 15)
+Ma = City("Maanzaad", 15, 15)
+Na = City("Naamloos", 15, 15)
+Me = City("Melisse", 15, 15)
+
+#--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
+route1 = Route([A, B, E, C, D])
+route2 = Route([F, G, H, I, J, K])
+route3 = Route([L, O, N, M, R, Q, P])
 route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
-route4.totalDistance()
 routes = {"5":route1, "6":route2, "7":route3, "10":route4}
 
+for key in routes:
+    routes[key].totalDistance()
 
+#--------------------------------------------------------GUI SETUP--------------------------------------------------------------------------
 newGui = GUI("Strooi Wagens", "1000x600", routes)
 newGui.home()
 newGui.root.mainloop()
