@@ -58,7 +58,7 @@ class GUI:
     def home(self):
         homeFrame = Frame(master=self.root)
         homeFrame.pack(fill="both", expand=True)
-        self.addButtons(homeFrame, self.mapFrame, 4)
+        self.addButtons(homeFrame, self.mapFrame)
         self.frames["home"] = homeFrame
 
     def moveBack(self, currFrame):
@@ -97,8 +97,8 @@ class GUI:
         canvas.pack(fill=BOTH, expand=True)
 
 
-    def addButtons(self, frame, func, amt):
-        for i in range(amt):
-            button = Button(master=frame, text="5 points", command=lambda arg=self.routes[i]: func(arg))
-            button.config(height=2, width=15)
-            button.pack(pady=25)
+    def addButtons(self, frame, func):
+        for key in self.routes:
+            button = Button(master=frame, text=key+" points", command=lambda arg=self.routes[key]: func(arg))
+            button.config(height=5, width=15)
+            button.pack(pady=30)

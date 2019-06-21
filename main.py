@@ -275,7 +275,7 @@ B1.addNeighbor(A1)
 #route set-up
 route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
 route4.totalDistance()
-routes = [route1, route2, route3, route4]
+routes = {"5":route1, "6":route2, "7":route3, "10":route4}
 
 
 newGui = GUI("Strooi Wagens", "1000x600", routes)
