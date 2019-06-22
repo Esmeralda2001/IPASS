@@ -100,5 +100,5 @@ class GUI:
     def addButtons(self, frame, func):
         for key in self.routes:
             button = Button(master=frame, text=key+" points", command=lambda arg=self.routes[key]: func(arg))
-            button.config(height=5, width=15)
-            button.pack(pady=30)
+            button.config(height=2, width=15)
+            button.pack(pady=20)

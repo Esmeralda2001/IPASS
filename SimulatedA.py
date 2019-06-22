@@ -79,7 +79,6 @@ def sA(startRoute):
     currentBest = startRoute
     bestRoute = startRoute
     while(Temp > 1):
-        #print(currentBest.distance)
         newRoute = Route(currentBest.route[:])
 
         i, j = randomIndexes(len(newRoute.route))

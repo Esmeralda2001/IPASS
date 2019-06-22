@@ -251,28 +251,106 @@ B1.addNeighbor(A1)
 #--------------------------------------------------------LEIDSCHE RIJN------------------------------------------------------------------------
 #POINTS: 15
 
-Bo = City("Bonen", 0, 10)
-Di = City("Dille", 15, 5)
-Wi = City("Winterkers", 15, 9)
-Ka = City("Karwij", 20, 20)
-Pe = City("Pepper", 2.5, 20)
-La = City("Lavender", 5, 0)
-Pi = City("Pimper", 10, 0)
-Se = City("Selderie", 10, 10)
-Ko = City("Koriander", 7.5, 5)
-Bi = City("Biel", 15, 15)
-Ba = City("Basilikum", 15, 15)
-Mi = City("Mierikswortel", 15, 15)
-Ma = City("Maanzaad", 15, 15)
-Na = City("Naamloos", 15, 15)
-Me = City("Melisse", 15, 15)
+Bo = City("Bonen", 0, 13)
+Di = City("Dille", 2, 13)
+Wi = City("Winterkers", 4, 13)
+Ka = City("Karwij", 6, 11)
+Pe = City("Pepper", 8, 13)
+La = City("Lavender", 10, 15)
+Pi = City("Pimper", 14, 8)
+Se = City("Selderie", 16, 11)
+Ko = City("Koriander", 18, 6)
+Bi = City("Biel", 20, 5)
+Ba = City("Basilikum", 21, 4)
+Mi = City("Mierikswortel", 16, 0)
+Ma = City("Maanzaad", 16, 4)
+Na = City("Naamloos", 10, 5)
+Me = City("Melisse", 6, 2)
+
+Bo.addNeighbor(Me)
+Bo.addNeighbor(Di)
+
+Di.addNeighbor(Bo)
+Di.addNeighbor(Wi)
+
+Wi.addNeighbor(Di)
+Wi.addNeighbor(Ka)
+Wi.addNeighbor(Me)
+
+Ka.addNeighbor(Wi)
+Ka.addNeighbor(Pe)
+Ka.addNeighbor(Na)
+Ka.addNeighbor(Me)
+
+Pe.addNeighbor(Ka)
+Pe.addNeighbor(Na)
+Pe.addNeighbor(La)
+Pe.addNeighbor(Me)
+
+La.addNeighbor(Pe)
+La.addNeighbor(Pi)
+La.addNeighbor(Se)
+La.addNeighbor(Na)
+
+Pi.addNeighbor(La)
+Pi.addNeighbor(Na)
+Pi.addNeighbor(Me)
+Pi.addNeighbor(Ma)
+Pi.addNeighbor(Se)
+
+Se.addNeighbor(Pi)
+Se.addNeighbor(Ko)
+Se.addNeighbor(La)
+
+Ko.addNeighbor(Se)
+Ko.addNeighbor(Ma)
+Ko.addNeighbor(Bi)
+Ko.addNeighbor(Mi)
+Ko.addNeighbor(Me)
+
+Bi.addNeighbor(Ko)
+Bi.addNeighbor(Ba)
+Bi.addNeighbor(Mi)
+Bi.addNeighbor(Ma)
+
+Ba.addNeighbor(Bi)
+Ba.addNeighbor(Mi)
+
+Mi.addNeighbor(Ba)
+Mi.addNeighbor(Ko)
+Mi.addNeighbor(Pi)
+Mi.addNeighbor(Ma)
+Mi.addNeighbor(Me)
+Mi.addNeighbor(Na)
+Mi.addNeighbor(Bi)
+
+Ma.addNeighbor(Pi)
+Ma.addNeighbor(Ko)
+Ma.addNeighbor(Mi)
+Ma.addNeighbor(Bi)
+
+Na.addNeighbor(Pi)
+Na.addNeighbor(Pe)
+Na.addNeighbor(Mi)
+Na.addNeighbor(Ka)
+Na.addNeighbor(La)
+
+Me.addNeighbor(Bo)
+Me.addNeighbor(Wi)
+Me.addNeighbor(Pe)
+Me.addNeighbor(Pi)
+Me.addNeighbor(Ko)
+Me.addNeighbor(Ba)
+Me.addNeighbor(Mi)
+Me.addNeighbor(Ka)
 
 #--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
 route1 = Route([A, B, E, C, D])
 route2 = Route([F, G, H, I, J, K])
 route3 = Route([L, O, N, M, R, Q, P])
 route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
-routes = {"5":route1, "6":route2, "7":route3, "10":route4}
+route5 = Route([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
+routes = {"5":route1, "6":route2, "7":route3, "10":route4, "15":route5}
 
 for key in routes:
     routes[key].totalDistance()
