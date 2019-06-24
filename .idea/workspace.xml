@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5468ee8d-e947-4f8b-9157-81954835118b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/6cities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7cities.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5cities.json" beforeDir="false" afterPath="$PROJECT_DIR$/5cities.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561395617422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561398972583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TSP$SimulatedA.coverage" NAME="SimulatedA Coverage Results" MODIFIED="1560849312324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -37,28 +38,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="json" value="2" />
+          <entry key="json" value="4" />
           <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="2" />
+          <entry key="JSON" value="4" />
           <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="json" value="157" />
-          <entry key="py" value="20251" />
-          <entry key="txt" value="2682" />
+          <entry key="json" value="247" />
+          <entry key="py" value="20432" />
+          <entry key="txt" value="2877" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="157" />
-          <entry key="PLAIN_TEXT" value="2682" />
-          <entry key="Python" value="20251" />
+          <entry key="JSON" value="247" />
+          <entry key="PLAIN_TEXT" value="2877" />
+          <entry key="Python" value="20432" />
         </counts>
       </usages-collector>
     </session>
@@ -81,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimulatedA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-370">
+            <state relative-caret-position="201">
               <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -95,14 +96,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="372" column="51" lean-forward="true" selection-start-line="372" selection-start-column="51" selection-end-line="372" selection-end-column="51" />
+            <state relative-caret-position="225">
+              <caret line="385" column="32" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1561395446591" expanded="true" signature="144:146" ph="..." />
-                <marker date="1561395446591" expanded="true" signature="6581:6790" ph="..." />
-                <marker date="1561395446591" expanded="true" signature="6953:7538" ph="..." />
+                <marker date="1561398901011" expanded="true" signature="144:145" ph="..." />
+                <marker date="1561398901011" expanded="true" signature="6609:6818" ph="..." />
+                <marker date="1561398901011" expanded="true" signature="6981:7627" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/7cities.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/6cities.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="834">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -110,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5cities.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-56">
               <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
@@ -184,6 +203,8 @@
         <option value="$PROJECT_DIR$/ClassRoute.py" />
         <option value="$PROJECT_DIR$/SimulatedA.py" />
         <option value="$PROJECT_DIR$/5cities.json" />
+        <option value="$PROJECT_DIR$/6cities.json" />
+        <option value="$PROJECT_DIR$/7cities.json" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -289,6 +310,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\midni\Documents\GitHub\TSP" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -642,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561393213068</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="main: added a function that now reads a json file as a format, updated the generate function so it calls the json reader function first and then uses that route to generate a random route">
+      <created>1561395692133</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1561395692133</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -702,7 +735,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SimulatedA: version before neighbors&#10;TwoOpt: works, might need some optimalization" />
     <MESSAGE value="SimulatedA: unfinished with neighbors&#10;ClassRoute: added functions for neighbors&#10;ClassCities: added function for neighbors" />
     <MESSAGE value="SimulatedA: is able to handle connectivity now &#10;ClassCities: added function to add neighbors" />
     <MESSAGE value="SimulatedA: extra function to check if a swap is valid" />
@@ -727,7 +759,8 @@
     <MESSAGE value="ClassRoute: added a function to check wether a route is valid or not &#10;SimulatedA: removed the original swapCheck function" />
     <MESSAGE value="main: added a function to randomly generate the routes" />
     <MESSAGE value="added a json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a json file" />
+    <MESSAGE value="main: added a function that now reads a json file as a format, updated the generate function so it calls the json reader function first and then uses that route to generate a random route" />
+    <option name="LAST_COMMIT_MESSAGE" value="main: added a function that now reads a json file as a format, updated the generate function so it calls the json reader function first and then uses that route to generate a random route" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TwoOpt.py" />
@@ -742,18 +775,6 @@
           <folding>
             <marker date="1560848327516" expanded="true" signature="184:189" ph="..." />
             <marker date="1560848327516" expanded="true" signature="184:324" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-370">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1561379977528" expanded="true" signature="385:387" ph="..." />
-            <marker date="1561379977528" expanded="true" signature="520:890" ph="..." />
           </folding>
         </state>
       </provider>
@@ -793,20 +814,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/5cities.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-56">
           <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6cities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1561379977528" expanded="true" signature="385:387" ph="..." />
+            <marker date="1561379977528" expanded="true" signature="520:890" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7cities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="372" column="51" lean-forward="true" selection-start-line="372" selection-start-column="51" selection-end-line="372" selection-end-column="51" />
+        <state relative-caret-position="225">
+          <caret line="385" column="32" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1561395446591" expanded="true" signature="144:146" ph="..." />
-            <marker date="1561395446591" expanded="true" signature="6581:6790" ph="..." />
-            <marker date="1561395446591" expanded="true" signature="6953:7538" ph="..." />
+            <marker date="1561398901011" expanded="true" signature="144:145" ph="..." />
+            <marker date="1561398901011" expanded="true" signature="6609:6818" ph="..." />
+            <marker date="1561398901011" expanded="true" signature="6981:7627" ph="..." />
           </folding>
         </state>
       </provider>

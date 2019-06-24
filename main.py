@@ -148,12 +148,12 @@ Q.addNeighbor(P)
 Q.addNeighbor(R)
 
 #adding neighbors to R
-Q.addNeighbor(L)
-Q.addNeighbor(M)
-Q.addNeighbor(N)
-Q.addNeighbor(O)
-Q.addNeighbor(P)
-Q.addNeighbor(Q)
+R.addNeighbor(L)
+R.addNeighbor(M)
+R.addNeighbor(N)
+R.addNeighbor(O)
+R.addNeighbor(P)
+R.addNeighbor(Q)
 
 #--------------------------------------------------------TEST CASE: 4--------------------------------------------------------------------------
 #CITIES: 10
@@ -372,18 +372,18 @@ def readPoints(file):
 
             for neighborCity in data[point]:
                 for n in data[point][neighborCity]:
-                    if n != "coordinates":
+                    if n != "coordinates" and data[point][neighborCity][n] == "1":
                         newRouteDict[neighborCity].addNeighbor(newRouteDict[n])
     return newRoute
 
 #readPoints("5cities")
 #--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
 route1 = generateRoute("5cities")#([A, B, C, D, E])
-#route2 = generateRoute([F, G, H, I, J, K])#Route([F, G, H, I, J, K])
-#route3 = generateRoute([L, M, N, O, P, Q, R])#Route([L, O, N, M, R, Q, P])
+route2 = generateRoute("6cities")#([F, G, H, I, J, K])#Route([F, G, H, I, J, K])
+route3 = generateRoute("7cities")#([L, M, N, O, P, Q, R])#Route([L, O, N, M, R, Q, P])
 #route4 = generateRoute([S, T, U, V, W, X, Y, Z, A1, B1])#Route([A1, U, S, B1, V, W, X, Y, T, Z])
 #route5 = generateRoute([Bo, Di, Me, Na, Ka, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi, Wi])#([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
-routes = {"5":route1} #"6":route2, "7":route3, "10":route4}
+routes = {"5":route1, "6":route2, "7":route3}#, "10":route4}
 
 for key in routes:
     routes[key].totalDistance()
