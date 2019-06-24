@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5468ee8d-e947-4f8b-9157-81954835118b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassRoute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimulatedA.py" beforeDir="false" afterPath="$PROJECT_DIR$/SimulatedA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561379977559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561381614382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TSP$SimulatedA.coverage" NAME="SimulatedA Coverage Results" MODIFIED="1560849312324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -47,14 +46,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="18753" />
-          <entry key="txt" value="2458" />
+          <entry key="py" value="19395" />
+          <entry key="txt" value="2601" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="2458" />
-          <entry key="Python" value="18753" />
+          <entry key="PLAIN_TEXT" value="2601" />
+          <entry key="Python" value="19395" />
         </counts>
       </usages-collector>
     </session>
@@ -74,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimulatedA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
-              <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="436">
+              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1561379977528" expanded="true" signature="385:387" ph="..." />
@@ -89,14 +88,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2349">
-              <caret line="344" column="18" lean-forward="true" selection-start-line="344" selection-start-column="18" selection-end-line="344" selection-end-column="18" />
+            <state relative-caret-position="338">
+              <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <marker date="1561375994324" expanded="true" signature="118:120" ph="..." />
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1561381407572" expanded="true" signature="132:134" ph="..." />
+                <marker date="1561381407572" expanded="true" signature="6569:6778" ph="..." />
               </folding>
             </state>
           </provider>
@@ -167,9 +167,9 @@
         <option value="$PROJECT_DIR$/ClassCities.py" />
         <option value="$PROJECT_DIR$/Utility.py" />
         <option value="$PROJECT_DIR$/GUI.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/ClassRoute.py" />
         <option value="$PROJECT_DIR$/SimulatedA.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -606,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561377036050</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="ClassRoute: added a function to check wether a route is valid or not &#10;SimulatedA: removed the original swapCheck function">
+      <created>1561380047216</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1561380047216</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -643,7 +650,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SimulatedA: algorithm semi-works" />
     <MESSAGE value="SimulatedA: algorithm works. Temperature might still need a better decrease calculation though." />
     <MESSAGE value="SimulatedA: using TwoOpt atm&#10;TwoOpt: still a prototype that doesn't work yet&#10;Utility: only contains the 'swap' function atm." />
     <MESSAGE value="SimulatedA: version before neighbors&#10;TwoOpt: works, might need some optimalization" />
@@ -668,7 +674,8 @@
     <MESSAGE value="main: test push" />
     <MESSAGE value="test-case made and tested." />
     <MESSAGE value="main: edited routes &#10;SA: added toString at the end" />
-    <option name="LAST_COMMIT_MESSAGE" value="main: edited routes &#10;SA: added toString at the end" />
+    <MESSAGE value="ClassRoute: added a function to check wether a route is valid or not &#10;SimulatedA: removed the original swapCheck function" />
+    <option name="LAST_COMMIT_MESSAGE" value="ClassRoute: added a function to check wether a route is valid or not &#10;SimulatedA: removed the original swapCheck function" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TwoOpt.py" />
@@ -707,13 +714,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="344" column="18" lean-forward="true" selection-start-line="344" selection-start-column="18" selection-end-line="344" selection-end-column="18" />
+        <state relative-caret-position="436">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1561375994324" expanded="true" signature="118:120" ph="..." />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1561379977528" expanded="true" signature="385:387" ph="..." />
+            <marker date="1561379977528" expanded="true" signature="520:890" ph="..." />
+            <marker date="1561379977528" expanded="true" signature="585:890" ph="..." />
           </folding>
         </state>
       </provider>
@@ -728,15 +737,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="52" column="37" lean-forward="true" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="338">
+          <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1561379977528" expanded="true" signature="385:387" ph="..." />
-            <marker date="1561379977528" expanded="true" signature="520:890" ph="..." />
-            <marker date="1561379977528" expanded="true" signature="585:890" ph="..." />
+            <marker date="1561381407572" expanded="true" signature="132:134" ph="..." />
+            <marker date="1561381407572" expanded="true" signature="6569:6778" ph="..." />
           </folding>
         </state>
       </provider>

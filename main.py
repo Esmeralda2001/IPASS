@@ -1,3 +1,4 @@
+import random
 from SimulatedA import sA
 from ClassRoute import *
 from ClassCities import *
@@ -343,10 +344,20 @@ Me.addNeighbor(Ko)
 Me.addNeighbor(Ba)
 Me.addNeighbor(Mi)
 Me.addNeighbor(Ka)
-
+#--------------------------------------------------------GENERATE RANDOM ROUTES---------------------------------------------------------------
+def generateRoute(startRoute):
+    randomRoutes = []
+    while len(randomRoutes) < 5:
+        possibleRoute = Route(startRoute[:])
+        random.shuffle(possibleRoute.route)
+        if possibleRoute.validRoute():
+            randomRoutes.append(possibleRoute)
+    for i in range(len(randomRoutes)):
+        randomRoutes[i].toString()
+    return randomRoutes[0]
 #--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
-route1 = Route([A, B, E, C, D])
-route2 = Route([F, G, H, I, J, K])
+route1 = generateRoute([A, B, C, D, E])
+route2 = generateRoute([F, G, H, I, J, K])#Route([F, G, H, I, J, K])
 route3 = Route([L, O, N, M, R, Q, P])
 route4 = Route([A1, U, S, B1, V, W, X, Y, T, Z])
 route5 = Route([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
