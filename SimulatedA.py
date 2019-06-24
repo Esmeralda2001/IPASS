@@ -105,7 +105,7 @@ def sA(startRoute):
         decrease = 1
         Temp -= decrease
 
-
+    bestRoute.toString()
     return bestRoute, time.monotonic()-startTime
 
 

@@ -348,7 +348,7 @@ Me.addNeighbor(Ka)
 route1 = Route([A, B, E, C, D])
 route2 = Route([F, G, H, I, J, K])
 route3 = Route([L, O, N, M, R, Q, P])
-route4 = Route([T, A1, B1, S, U, V, W, X, Y, Z])
+route4 = Route([A1, U, S, B1, V, W, X, Y, T, Z])
 route5 = Route([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
 routes = {"5":route1, "6":route2, "7":route3, "10":route4, "15":route5}
 
