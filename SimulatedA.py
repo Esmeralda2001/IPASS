@@ -31,8 +31,7 @@ def swapCheck(newR, i, j):
         swap(newR.route, i, j)
         i, j = randomIndexes(len(newR.route))
         swap(newR.route, i, j)
-        if newR.validRoute():
-            swapFound = True
+        swapFound = newR.validRoute()
 
     if not swapFound:
         swap(newR.route, i, j)
