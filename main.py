@@ -358,10 +358,10 @@ def generateRoute(startRoute):
 #--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
 route1 = generateRoute([A, B, C, D, E])
 route2 = generateRoute([F, G, H, I, J, K])#Route([F, G, H, I, J, K])
-route3 = Route([L, O, N, M, R, Q, P])
-route4 = Route([A1, U, S, B1, V, W, X, Y, T, Z])
-route5 = Route([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
-routes = {"5":route1, "6":route2, "7":route3, "10":route4, "15":route5}
+route3 = generateRoute([L, M, N, O, P, Q, R])#Route([L, O, N, M, R, Q, P])
+route4 = generateRoute([S, T, U, V, W, X, Y, Z, A1, B1])#Route([A1, U, S, B1, V, W, X, Y, T, Z])
+#route5 = generateRoute([Bo, Di, Me, Na, Ka, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi, Wi])#([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
+routes = {"5":route1, "6":route2, "7":route3, "10":route4}
 
 for key in routes:
     routes[key].totalDistance()
