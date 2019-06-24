@@ -1,4 +1,5 @@
 import random
+import json
 from SimulatedA import sA
 from ClassRoute import *
 from ClassCities import *
@@ -345,7 +346,8 @@ Me.addNeighbor(Ba)
 Me.addNeighbor(Mi)
 Me.addNeighbor(Ka)
 #--------------------------------------------------------GENERATE RANDOM ROUTES---------------------------------------------------------------
-def generateRoute(startRoute):
+def generateRoute(file):
+    startRoute = readPoints(file)
     randomRoutes = []
     while len(randomRoutes) < 5:
         possibleRoute = Route(startRoute[:])
@@ -355,13 +357,33 @@ def generateRoute(startRoute):
     for i in range(len(randomRoutes)):
         randomRoutes[i].toString()
     return randomRoutes[0]
+
+def readPoints(file):
+    newRoute = []
+    newRouteDict = {}
+    with open(file+".json") as jsonFile:
+        data = json.load(jsonFile)
+        for point in data:
+            for setCity in data[point]:
+                c = data[point][setCity]["coordinates"]
+                newCity = City(setCity, c[0], c[1])
+                newRoute.append(newCity)
+                newRouteDict[setCity] = newCity
+
+            for neighborCity in data[point]:
+                for n in data[point][neighborCity]:
+                    if n != "coordinates":
+                        newRouteDict[neighborCity].addNeighbor(newRouteDict[n])
+    return newRoute
+
+#readPoints("5cities")
 #--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
-route1 = generateRoute([A, B, C, D, E])
-route2 = generateRoute([F, G, H, I, J, K])#Route([F, G, H, I, J, K])
-route3 = generateRoute([L, M, N, O, P, Q, R])#Route([L, O, N, M, R, Q, P])
-route4 = generateRoute([S, T, U, V, W, X, Y, Z, A1, B1])#Route([A1, U, S, B1, V, W, X, Y, T, Z])
+route1 = generateRoute("5cities")#([A, B, C, D, E])
+#route2 = generateRoute([F, G, H, I, J, K])#Route([F, G, H, I, J, K])
+#route3 = generateRoute([L, M, N, O, P, Q, R])#Route([L, O, N, M, R, Q, P])
+#route4 = generateRoute([S, T, U, V, W, X, Y, Z, A1, B1])#Route([A1, U, S, B1, V, W, X, Y, T, Z])
 #route5 = generateRoute([Bo, Di, Me, Na, Ka, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi, Wi])#([Me, Bo, Di, Wi, Ka, Na, Pe, La, Pi, Se, Ko, Ma, Bi, Ba, Mi])
-routes = {"5":route1, "6":route2, "7":route3, "10":route4}
+routes = {"5":route1} #"6":route2, "7":route3, "10":route4}
 
 for key in routes:
     routes[key].totalDistance()
