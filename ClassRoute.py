@@ -24,4 +24,11 @@ class Route:
             names.append(self.route[i].name)
         print(names)
 
+    def validRoute(self):
+        route = self.route
+        for i in range(len(route) - 1):
+            if route[i] not in route[i + 1].neighbors:
+                return False
+        return True
+
 
