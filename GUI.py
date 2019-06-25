@@ -74,7 +74,10 @@ class GUI:
             infoFrame = Frame(master=newFrame)
             infoFrame.pack(side=TOP)
             time = Label(master=infoFrame, text="Time taken to calculate: "+str(elapsedTime))
-            length = Label(master=infoFrame, text="Route length: "+str(route.distance))
+            if oldLength == route.distance:
+                length = Label(master=infoFrame, text="No improvements were found")
+            else:
+                length = Label(master=infoFrame, text="Route length: "+str(route.distance))
             oldL = Label(master=infoFrame, text="Old route length: "+str(oldLength))
             time.pack(expand=True, fill=BOTH)
             length.pack(expand=True, fill=BOTH)
