@@ -354,8 +354,6 @@ def generateRoute(file):
         random.shuffle(possibleRoute.route)
         if possibleRoute.validRoute():
             randomRoutes.append(possibleRoute)
-    for i in range(len(randomRoutes)):
-        randomRoutes[i].toString()
     return randomRoutes[0]
 
 def readPoints(file):
@@ -387,6 +385,7 @@ routes = {"5":route1, "6":route2, "7":route3, "10":route4}
 
 for key in routes:
     routes[key].totalDistance()
+    print(routes[key].connectionAmt())
 
 #--------------------------------------------------------GUI SETUP--------------------------------------------------------------------------
 newGui = GUI("Strooi Wagens", "1000x600", routes)

@@ -24,6 +24,13 @@ class Route:
             names.append(self.route[i].name)
         print(names)
 
+    def connectionAmt(self):
+        connections = 0
+        route = self.route
+        for city in route:
+            connections += len(city.neighbors)
+        return connections
+
     def validRoute(self):
         route = self.route
         for i in range(len(route) - 1):
