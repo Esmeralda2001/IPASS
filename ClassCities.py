@@ -12,8 +12,8 @@ class City:
         :param posx: x-coordinate of the city
         :param posy: y-coordinate of the city
         :type name: basestring
-        :type posx: integer
-        :type posy: integer
+        :type posx: float/integer
+        :type posy: float/integer
         """
         self.name = name
         self.x = posx
