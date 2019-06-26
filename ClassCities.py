@@ -1,5 +1,9 @@
 import math
 
+'''
+This module contains the 'City' class
+It is primarily used by the 'Route' class 
+'''
 class City:
 
     def __init__(self, name, posx, posy):

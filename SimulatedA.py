@@ -1,6 +1,5 @@
 import random
 import time
-from ClassCities import City
 from ClassRoute import Route
 
 #swap function
