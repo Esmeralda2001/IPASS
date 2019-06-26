@@ -1,30 +1,42 @@
 class Route:
-    #constructor function for class 'Route'
-    #route has a property 'distance'
-    #which is the total distance you would travel if you were to take this route
+    """
+    This module contains the 'Route Class'
+    An instance of Route has a list that contains instances of class City
+    """
+
     def __init__(self, route):
+        """
+        :param route: a list containing instances of class 'City'
+        """
         self.route = route
         self.distance = 0
 
-
-    #function to calculate the total distance of this route
-    #distance between each city is calculated and added to the total
     def totalDistance(self):
+        """
+        :return: returns void, sets the total distance.
+        Total distance = distance from the first City to the second City, added to the distance between the second and third City, etc.
+        """
         total = 0
         for i in range(len(self.route)-1):
             c1 = self.route[i]
             c2 = self.route[i+1]
             total += c1.distance(c2)
-        #total += self.route[0].distance(self.route[-1])
         self.distance = total
 
     def toString(self):
+        """
+        :return: returns void. Function puts the name of each City into a list and prints it
+        """
         names = []
         for i in range(len(self.route)):
             names.append(self.route[i].name)
         print(names)
 
     def connectionAmt(self):
+        """
+        :return: returns the total amount of connections of all Cities combined. Connections = amount of neighbors per City
+        :rtype: integer
+        """
         connections = 0
         route = self.route
         for city in route:
@@ -32,6 +44,11 @@ class Route:
         return connections
 
     def validRoute(self):
+        """
+        :return: returns if the Route is a valid route or not.
+        A route is valid if the first City in the route is the neighbor of the second City and if the second City is the neighbor of the third City etc.
+        :rtype: bool
+        """
         route = self.route
         for i in range(len(route) - 1):
             if route[i] not in route[i + 1].neighbors:

@@ -4,6 +4,7 @@
     <list default="true" id="5468ee8d-e947-4f8b-9157-81954835118b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClassCities.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassCities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassRoute.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561556681367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561559186366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TSP$SimulatedA.coverage" NAME="SimulatedA Coverage Results" MODIFIED="1560849312324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -50,15 +51,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="686" />
-          <entry key="py" value="21650" />
-          <entry key="txt" value="3464" />
+          <entry key="py" value="23238" />
+          <entry key="txt" value="3570" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="686" />
-          <entry key="PLAIN_TEXT" value="3464" />
-          <entry key="Python" value="21650" />
+          <entry key="PLAIN_TEXT" value="3570" />
+          <entry key="Python" value="23238" />
         </counts>
       </usages-collector>
     </session>
@@ -68,25 +69,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClassCities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="255">
+              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
-                <marker date="1561556681319" expanded="true" signature="25:30" ph="..." />
-                <marker date="1561556681319" expanded="true" signature="25:350" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimulatedA.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1561400836756" expanded="true" signature="385:387" ph="..." />
-                <marker date="1561400836756" expanded="true" signature="520:869" ph="..." />
+                <marker date="1561559186341" expanded="true" signature="129:134" ph="..." />
+                <marker date="1561559186341" expanded="true" signature="129:510" ph="..." />
               </folding>
             </state>
           </provider>
@@ -179,10 +166,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassRoute.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="34">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
               <folding>
-                <marker date="1561473884134" expanded="true" signature="174:179" ph="..." />
+                <marker date="1561560166886" expanded="true" signature="72:77" ph="..." />
               </folding>
             </state>
           </provider>
@@ -214,8 +201,6 @@
       <list>
         <option value="$PROJECT_DIR$/TwoOpt.py" />
         <option value="$PROJECT_DIR$/Utility.py" />
-        <option value="$PROJECT_DIR$/SimulatedA.py" />
-        <option value="$PROJECT_DIR$/ClassRoute.py" />
         <option value="$PROJECT_DIR$/5cities.json" />
         <option value="$PROJECT_DIR$/7cities.json" />
         <option value="$PROJECT_DIR$/6cities.json" />
@@ -223,7 +208,9 @@
         <option value="$PROJECT_DIR$/LeidscheRijn.json" />
         <option value="$PROJECT_DIR$/GUI.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/SimulatedA.py" />
         <option value="$PROJECT_DIR$/ClassCities.py" />
+        <option value="$PROJECT_DIR$/ClassRoute.py" />
       </list>
     </option>
   </component>
@@ -735,7 +722,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561489112024</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="ClassCities: added docstrings">
+      <created>1561556832168</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1561556832168</updated>
+    </task>
+    <task id="LOCAL-00048" summary="ClassCities: added more docstrings&#10;SimulatedA: removed import from module ClassCities">
+      <created>1561557542352</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1561557542352</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -795,8 +796,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ClassRoute: removed adding the distance between the first and last point to the total (due to the last and first not always having a connection)&#10;GUI: just added." />
-    <MESSAGE value="main: changed test cases a little + now i'm drawing the routes &#10;GUI: added a draw circle function + draw route function &#10;SimulatedA: returns the best route instead of just printing it &#10;Utility: added a function to change the coordinates of points a little" />
     <MESSAGE value="main: added a 10-city test case&#10;GUI: added text + circles + vertexes" />
     <MESSAGE value="main: edited test cases a little to see all of them during the same run." />
     <MESSAGE value="Utility: coordinates function has been edited&#10;GUI: added a new function to display connectivity &#10;main: added a new function once again for connectivity" />
@@ -820,25 +819,15 @@
     <MESSAGE value="edited all json files to find the minimum connection between all points" />
     <MESSAGE value="LeidscheRijn: edited json file. added more connections. Connections have not met the minimum. &#10;main: added a new function for picking the shortest found route as the starting route to improve." />
     <MESSAGE value="GUI: added a check in case no improvements are found after running the algorithm&#10;main: made sure that each route's distance is determined before finding the shortest one to start from." />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI: added a check in case no improvements are found after running the algorithm&#10;main: made sure that each route's distance is determined before finding the shortest one to start from." />
+    <MESSAGE value="ClassCities: added docstrings" />
+    <MESSAGE value="ClassCities: added more docstrings&#10;SimulatedA: removed import from module ClassCities" />
+    <option name="LAST_COMMIT_MESSAGE" value="ClassCities: added more docstrings&#10;SimulatedA: removed import from module ClassCities" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TwoOpt.py" />
     <entry file="file://$PROJECT_DIR$/Utility.py" />
     <entry file="file://$USER_HOME$/Desktop/School/Adaptive Computing/example.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1561400836756" expanded="true" signature="385:387" ph="..." />
-            <marker date="1561400836756" expanded="true" signature="520:869" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LeidscheRijn.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -898,16 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassRoute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding>
-            <marker date="1561473884134" expanded="true" signature="174:179" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -920,13 +899,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="46" lean-forward="true" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1561557370108" expanded="true" signature="356:358" ph="..." />
+            <marker date="1561557370108" expanded="true" signature="491:840" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassRoute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding>
+            <marker date="1561560166886" expanded="true" signature="72:77" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ClassCities.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="255">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
-            <marker date="1561556681319" expanded="true" signature="25:30" ph="..." />
-            <marker date="1561556681319" expanded="true" signature="25:350" ph="..." />
+            <marker date="1561559186341" expanded="true" signature="129:134" ph="..." />
+            <marker date="1561559186341" expanded="true" signature="129:510" ph="..." />
           </folding>
         </state>
       </provider>
