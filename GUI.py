@@ -5,7 +5,6 @@ from SimulatedA import sA
 Module for a GUI that displays the calculated routes for several test-cases 
 '''
 
-
 class GUI:
     def __init__(self, title, geo, routes):
         """
@@ -99,10 +98,13 @@ class GUI:
             neighbor = route[i+1]
             x1, y1 = self.calculateCoordinates(city.x, city.y)
             x2, y2 = self.calculateCoordinates(neighbor.x, neighbor.y)
+            #drawing a circle that represents the city
             self.makeCircle(canvas, x1, y1)
             Label(master=canvas, text=city.name).place(x=x1 + 5, y=y1 - 5)
+            #drawing a line between the city and it's neighbor
             canvas.create_line(x1, y1, x2, y2, width=5)
 
+        #drawing a circle for the last city
         lastCity = route[-1]
         x, y = self.calculateCoordinates(lastCity.x, lastCity.y)
         Label(master=canvas, text=lastCity.name).place(x=x + 5, y=y - 5)
@@ -132,13 +134,22 @@ class GUI:
 
     def mapFrame(self, route, frame=None, result=False):
         newFrame = Frame(master=self.root)
+        #if the 'Calculate Result button was pressed
+        #then calculate the improved route
+        #and then draw this route
+        #else draw the start route and draw the 'Calculate Result' button
         if result:
+            #making the Frame with the old route dissapear
             frame.pack_forget()
             oldLength = route.distance
             route, elapsedTime = sA(route)
-            infoFrame = Frame(master=newFrame)
+            infoFrame = Frame(master=newFrame) #new frame to display the improved route
             infoFrame.pack(side=TOP)
             time = Label(master=infoFrame, text="Time taken to calculate: "+str(elapsedTime))
+            #if the 'improved' route length is the same as the old route length
+            #then no improvement has been found
+            #therefore no new route length will be displayed
+            #else the new route length, along with the new route, shall be displayed
             if oldLength == route.distance:
                 length = Label(master=infoFrame, text="No improvements were found")
             else:
@@ -148,17 +159,24 @@ class GUI:
             length.pack(expand=True, fill=BOTH)
             oldL.pack(expand=True, fill=BOTH)
         else:
+            #'Calculate Result' button setup
             resultButton = Button(master=newFrame, text="Calculate Result",
             command=lambda arg1=route, arg2=newFrame, arg3=True: self.mapFrame(arg1, arg2, arg3))
             resultButton.config(height=2, width=15)
             resultButton.pack(padx=10, pady=10)
 
+        #making the home frame dissapear
         self.frames["home"].pack_forget()
+
+        #making the new frame appear
         newFrame.pack(fill="both", expand=True)
+
+        #'Return' button setup
         backButton = Button(master=newFrame, text="Return", command=lambda arg=newFrame: self.moveBack(arg))
         backButton.config(height=2, width=15)
         backButton.pack(padx=10, pady=10)
 
+        #canvas setup
         canvas = Canvas(master=newFrame)
         self.connections(canvas, route)
         self.drawRoute(canvas, route.route)
@@ -174,6 +192,7 @@ class GUI:
         :return: void. Function simply adds buttons to the Frame
         """
         for key in self.routes:
+            #creating a button for each route
             button = Button(master=frame, text=key+" points", command=lambda arg=self.routes[key]: func(arg))
             button.config(height=2, width=15)
             button.pack(pady=20)
