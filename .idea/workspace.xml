@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5468ee8d-e947-4f8b-9157-81954835118b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassCities.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassCities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimulatedA.py" beforeDir="false" afterPath="$PROJECT_DIR$/SimulatedA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561569922074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TSP$main.coverage" NAME="main Coverage Results" MODIFIED="1561573524903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TSP$SimulatedA.coverage" NAME="SimulatedA Coverage Results" MODIFIED="1560849312324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -52,15 +51,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="686" />
-          <entry key="py" value="26785" />
-          <entry key="txt" value="3624" />
+          <entry key="py" value="28567" />
+          <entry key="txt" value="3647" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="686" />
-          <entry key="PLAIN_TEXT" value="3624" />
-          <entry key="Python" value="26785" />
+          <entry key="PLAIN_TEXT" value="3647" />
+          <entry key="Python" value="28567" />
         </counts>
       </usages-collector>
     </session>
@@ -70,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ClassCities.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="-296">
+              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
               <folding>
                 <marker date="1561566434690" expanded="true" signature="129:134" ph="..." />
                 <marker date="1561566434690" expanded="true" signature="129:522" ph="..." />
@@ -83,26 +82,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SimulatedA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            <state relative-caret-position="192">
+              <caret line="72" column="110" selection-start-line="72" selection-start-column="110" selection-end-line="72" selection-end-column="110" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1561566300823" expanded="true" signature="831:832" ph="..." />
-                <marker date="1561566300823" expanded="true" signature="832:1466" ph="..." />
+                <marker date="1561573115438" expanded="true" signature="831:832" ph="..." />
+                <marker date="1561573115438" expanded="true" signature="832:1466" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-578">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="153">
+              <caret line="78" column="41" lean-forward="true" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1561489954588" expanded="true" signature="373:583" ph="..." />
-                <marker date="1561489954588" expanded="true" signature="1381:1587" ph="..." />
+                <marker date="1561573323473" expanded="true" signature="616:826" ph="..." />
+                <marker date="1561573323473" expanded="true" signature="2164:2370" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,23 +125,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="303">
+              <caret line="194" column="45" selection-start-line="194" selection-start-column="45" selection-end-line="194" selection-end-column="45" />
               <folding>
-                <marker date="1561570199621" expanded="true" signature="59:526" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="2047:3027" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="2651:2656" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="3332:3337" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="4207:4208" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="4207:4212" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="4207:4391" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="4657:4730" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="6345:6346" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="6345:6348" ph="..." />
-                <marker date="1561570199621" expanded="true" signature="6672:6677" ph="..." />
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1561571978081" expanded="true" signature="145:612" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="2133:3113" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="2737:2742" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="3418:3423" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="4455:4456" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="4455:4460" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="4455:4639" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="4905:4978" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="7349:7350" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="7349:7352" ph="..." />
+                <marker date="1561571978081" expanded="true" signature="7676:7681" ph="..." />
               </folding>
             </state>
           </provider>
@@ -193,11 +193,11 @@
         <option value="$PROJECT_DIR$/6cities.json" />
         <option value="$PROJECT_DIR$/10cities.json" />
         <option value="$PROJECT_DIR$/LeidscheRijn.json" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/ClassRoute.py" />
-        <option value="$PROJECT_DIR$/SimulatedA.py" />
         <option value="$PROJECT_DIR$/ClassCities.py" />
         <option value="$PROJECT_DIR$/GUI.py" />
+        <option value="$PROJECT_DIR$/SimulatedA.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -386,20 +386,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560432003504</updated>
-    </task>
-    <task id="LOCAL-00001" summary="a test">
-      <created>1560432157184</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1560432157184</updated>
-    </task>
-    <task id="LOCAL-00002" summary="a test 1.2">
-      <created>1560433303905</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1560433303905</updated>
     </task>
     <task id="LOCAL-00003" summary="class city 1.0">
       <created>1560433810851</created>
@@ -730,7 +716,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561560253968</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Further documentation">
+      <created>1561570604411</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1561570604412</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Further documentation">
+      <created>1561571981582</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1561571981582</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -790,7 +790,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main: edited test cases a little to see all of them during the same run." />
     <MESSAGE value="Utility: coordinates function has been edited&#10;GUI: added a new function to display connectivity &#10;main: added a new function once again for connectivity" />
     <MESSAGE value="SimulatedA: edited algorithm and now it has a higher speed&#10;main: only letting the 10-city case run atm." />
     <MESSAGE value="Utility: placed both functions in the correct files and then deleted the Utility file" />
@@ -815,7 +814,8 @@
     <MESSAGE value="ClassCities: added docstrings" />
     <MESSAGE value="ClassCities: added more docstrings&#10;SimulatedA: removed import from module ClassCities" />
     <MESSAGE value="ClassCities: fixed docstrings a little&#10;ClassRoute: added docstrings" />
-    <option name="LAST_COMMIT_MESSAGE" value="ClassCities: fixed docstrings a little&#10;ClassRoute: added docstrings" />
+    <MESSAGE value="Further documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further documentation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TwoOpt.py" />
@@ -858,18 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1561489954588" expanded="true" signature="373:583" ph="..." />
-            <marker date="1561489954588" expanded="true" signature="1381:1587" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClassRoute.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -880,10 +868,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="194" column="45" selection-start-line="194" selection-start-column="45" selection-end-line="194" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1561571978081" expanded="true" signature="145:612" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="2133:3113" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="2737:2742" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="3418:3423" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="4455:4456" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="4455:4460" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="4455:4639" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="4905:4978" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="7349:7350" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="7349:7352" ph="..." />
+            <marker date="1561571978081" expanded="true" signature="7676:7681" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="72" column="110" selection-start-line="72" selection-start-column="110" selection-end-line="72" selection-end-column="110" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1561573115438" expanded="true" signature="831:832" ph="..." />
+            <marker date="1561573115438" expanded="true" signature="832:1466" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ClassCities.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="-296">
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
           <folding>
             <marker date="1561566434690" expanded="true" signature="129:134" ph="..." />
             <marker date="1561566434690" expanded="true" signature="129:522" ph="..." />
@@ -891,34 +912,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatedA.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state relative-caret-position="153">
+          <caret line="78" column="41" lean-forward="true" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1561566300823" expanded="true" signature="831:832" ph="..." />
-            <marker date="1561566300823" expanded="true" signature="832:1466" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <marker date="1561570199621" expanded="true" signature="59:526" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="2047:3027" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="2651:2656" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="3332:3337" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="4207:4208" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="4207:4212" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="4207:4391" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="4657:4730" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="6345:6346" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="6345:6348" ph="..." />
-            <marker date="1561570199621" expanded="true" signature="6672:6677" ph="..." />
+            <marker date="1561573323473" expanded="true" signature="616:826" ph="..." />
+            <marker date="1561573323473" expanded="true" signature="2164:2370" ph="..." />
           </folding>
         </state>
       </provider>

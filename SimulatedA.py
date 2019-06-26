@@ -70,6 +70,7 @@ def sA(startRoute):
     :type startRoute: Route
     :return: returns an improved version of the startRoute and the time it took to find this improved version
     :rtype: Route, float
+    :warning: not enough connections between each city/point can lead to the algorithm becoming less effective
     """
     startTime = time.monotonic()
     Temp = 1000*len(startRoute.route)
