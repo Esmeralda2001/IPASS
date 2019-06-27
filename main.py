@@ -72,11 +72,11 @@ def shortestRoute(currRoutes):
 
 #readPoints("5cities")
 #--------------------------------------------------------ROUTE SETUP--------------------------------------------------------------------------
-route1 = generateRoute("5cities", 5)
-route2 = generateRoute("6cities", 5)
-route3 = generateRoute("7cities", 5)
-route4 = generateRoute("10cities", 5)
-route5 = generateRoute("LeidscheRijn", 3)
+route1 = generateRoute("TestCases/5cities", 5)
+route2 = generateRoute("TestCases/6cities", 5)
+route3 = generateRoute("TestCases/7cities", 5)
+route4 = generateRoute("TestCases/10cities", 5)
+route5 = generateRoute("TestCases/LeidscheRijn", 3)
 
 #dictionary containing several generated routes
 routes = {"5":route1, "6":route2, "7":route3, "10":route4, "LeidscheRijn":route5}
